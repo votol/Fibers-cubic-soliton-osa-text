@@ -1,42 +1,33 @@
-\documentclass{osa-article}
-\usepackage{color,xcolor}
-\usepackage{bm}
-%% Select the journal you're submitting to
-%% oe, boe, ome, osac, osajournal
-\journal{osajournal}
-% Key:
-% Express journals must have the correct journal selected:
-% {oe} Optics Express
-% {boe} Biomedical Optics Express
-% {ome} Optical Material Express
-% {osac} OSAC Continuum
-% Other OSA journals may use:
-% {osajournal} Applied Optics, Advances in Optics and Photonics, Journal of the Optical Society of America A/B, Optics Letters, Optica, Photonics Research
+\documentclass[9pt,twocolumn,twoside]{osajnl}
+%% Please use 11pt if submitting to AOP
+% \documentclass[11pt,twocolumn,twoside]{osajnl}
+\journal{ol} % Choose journal (ao, aop, josaa, josab, ol, optica, pr)
 
-% Uncomment if submitting to Photonics Research.
-% ONLY APPLICABLE FOR \journal{osajournal}
-% \setprjcopyright
-
-% Set the article type
-\articletype{Research Article}
-% Note that article type is not required for Express journals (OE, BOE, OME and OSAC)
-
-\begin{document}
+% See template introduction for guidance on setting shortarticle option
+\setboolean{shortarticle}{true}
+% true = letter / tutorial
+% false = research / review article
+% (depending on journal).
 
 \title{Generation of entangled states of light using discrete solitons in waveguide arrays}
 
-\author{V.O. Martynov,\authormark{1,*} V. O. Munyaev,\authormark{2} and L. A. Smirnov\authormark{1,2}}
+\author[1,*]{V.O. Martynov}
+\author[2]{V. O. Munyaev}
+\author[1,2]{L. A. Smirnov}
 
-\address{\authormark{1}Institute of Applied Physics of the Russian Academy of Sciences, Nizhny Novgorod, 603950, Russia\\
-\authormark{2}Department of Control Theory, Nizhny Novgorod State University, Nizhny Novgorod, 603950, Russia
-}
+\affil[1]{Institute of Applied Physics of the Russian Academy of Sciences, Nizhny Novgorod, 603950, Russia}
+\affil[2]{Department of Control Theory, Nizhny Novgorod State University, Nizhny Novgorod, 603950, Russia}
 
-\email{\authormark{*}martvo@ipfran.ru} %% email address is required
+\affil[*]{Corresponding author: martvo@ipfran.ru}
 
-% \homepage{http:...} %% author's URL, if desired
+%% To be edited by editor
+% \dates{Compiled \today}
 
-%%%%%%%%%%%%%%%%%%% abstract %%%%%%%%%%%%%%%%
-%% [use \begin{abstract*}...\end{abstract*} if exempt from copyright]
+%\ociscodes{(140.3490) Lasers, distributed feedback; (060.2420) Fibers, polarization-maintaining;(060.3735) Fiber Bragg gratings.}
+
+%% To be edited by editor
+% \doi{\url{http://dx.doi.org/10.1364/XX.XX.XXXXXX}}
+
 \begin{abstract}
 We study the quantum properties of light propagating through an array of coupled nonlinear waveguides and forming a discrete soliton. 
 We demonstrate that it is possible to use certain types of quasi-solitons to form continuous variables entanglement between the certain pair of waveguides.
@@ -44,6 +35,13 @@ Moreover, there is possibility to entangle several pairs of waveguides independe
 We show that the entanglement is generated for arbitrary high intensity of the input laser field, so it does not require a special material with an extremely high nonlinearity coefficient. 
 Also absorption in the waveguide media does not influence the discussed process too much. 
 \end{abstract}
+
+\setboolean{displaycopyright}{true}
+\usepackage{bm}
+\begin{document}
+
+\maketitle
+
 On-chip integrated optical waveguide circuits open a wide variety of possibilities to manipulate quantum states of light~\cite{zoubi_quantum_2017, silverstone_-chip_2014, matthews_manipulation_2009, kruse_dual-path_2015}. 
 One of the most promising usage of such devices is implementation of various quantum informatics algorithms~\cite{nielsen_quantum_2000}. Entangled states of light are the key element of quantum information processing. 
 Development of integrated devices which generate such states using ordinary laser sources as their input appears to be an important problem. 
@@ -61,7 +59,7 @@ We will show that the similar behavior present in the discussed system.
 The basic idea is that due to nonlinearity, the photon statistics will change as light travels through the waveguide.
 \begin{figure}[h!]
 	\centering\includegraphics[width=7cm]{fig1}
-	\caption{Schematic of quantum light propagation along an array of nonlinear waveguides.}
+	\caption{Schematic depiction of the quantum light propagation along an array of nonlinear waveguides.}
 	\label{fig:schema}
 \end{figure}
 And the interaction between the optical modes of the waveguides will transform this non-classical state of light into an entangled one. 
@@ -251,10 +249,147 @@ However, this is the topic for future studies.
 The reported study was funded by RFBR according to the research project № 19-32-80038
 \section*{Disclosures}
 The authors declare no conflicts of interest.
+%\section{Introduction}
+%This legacy template is designed to assist with creating an article to submit to \emph{Applied Optics}, \emph{Advances in Optics and Photonics}, JOSA A, JOSA B, \emph{Optics Letters} or \emph{Optica}. See the OSA's \href{http://www.opticsinfobase.org/submit/style/}{Style Guide} and \href{http://www.opticsinfobase.org/submit/templates/}{Manuscript Templates} pages for more details. Please select the appropriate journal abbreviation (ao, aop, josaa, josab, ol, optica) in the document preamble.
+%
+%Use the shortarticle/false option for \emph{Applied Optics}, JOSA A, and JOSA B. Use the shortarticle/true option for \emph{Optics Letters}. For \emph{Advances in Optics and Photonics}, use the shortarticle/false option for Review Articles, and the shortarticle/true option for Tutorials.
+%
+%If you have a question while using this template on {Overleaf}, please use the help menu (``?'') on the top bar to search for help or ask us a question using our \href{https://www.overleaf.com/contact}{contact form}.
+%
+%\section{Examples of Article Components}
+%\label{sec:examples}
+%
+%The sections below show examples of different article components.
+%
+%\section{Figures and Tables}
+%
+%It is not necessary to place figures and tables at the back of the manuscript. Figures and tables should be sized as they are to appear in the final article. Do not include a separate list of figure captions and table titles.
+%
+%Figures and Tables should be labelled and referenced in the standard way using the \verb|\label{}| and \verb|\ref{}| commands.
+%
+%\subsection{Sample Figure}
+%
+%Figure \ref{fig:false-color} shows an example figure.
+%
+%\begin{figure}[htbp]
+%\centering
+%\fbox{\includegraphics[width=\linewidth]{sample}}
+%\caption{False-color image, where each pixel is assigned to one of seven reference spectra.}
+%\label{fig:false-color}
+%\end{figure}
+%
+%\subsection{Sample Table}
+%
+%Table \ref{tab:shape-functions} shows an example table.
+%
+%\begin{table}[htbp]
+%\centering
+%\caption{\bf Shape Functions for Quadratic Line Elements}
+%\begin{tabular}{ccc}
+%\hline
+%local node & $\{N\}_m$ & $\{\Phi_i\}_m$ $(i=x,y,z)$ \\
+%\hline
+%$m = 1$ & $L_1(2L_1-1)$ & $\Phi_{i1}$ \\
+%$m = 2$ & $L_2(2L_2-1)$ & $\Phi_{i2}$ \\
+%$m = 3$ & $L_3=4L_1L_2$ & $\Phi_{i3}$ \\
+%\hline
+%\end{tabular}
+%  \label{tab:shape-functions}
+%\end{table}
+%
+%\section{Sample Equation}
+%
+%Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+%\begin{equation}
+%S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+%      = \frac{1}{n}\sum_{i}^{n} X_i
+%\label{eq:refname1}
+%\end{equation}
+%denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+%
+%\section{Sample Algorithm}
+%
+%Algorithms can be included using the commands as shown in algorithm \ref{alg:euclid}.
+%
+%\begin{algorithm}
+%\caption{Euclid’s algorithm}\label{alg:euclid}
+%\begin{algorithmic}[1]
+%\Procedure{Euclid}{$a,b$}\Comment{The g.c.d. of a and b}
+%\State $r\gets a\bmod b$
+%\While{$r\not=0$}\Comment{We have the answer if r is 0}
+%\State $a\gets b$
+%\State $b\gets r$
+%\State $r\gets a\bmod b$
+%\EndWhile\label{euclidendwhile}
+%\State \textbf{return} $b$\Comment{The gcd is b}
+%\EndProcedure
+%\end{algorithmic}
+%\end{algorithm}
+%
+%\subsection{Supplementary materials in OSA journals}
+%OSA journals allow authors to include supplementary materials as integral parts of a manuscript. Such materials are subject to peer-review procedures along with the rest of the paper and should be uploaded and described using OSA's Prism manuscript system. Please refer to the \href{https://www.opticsinfobase.org/submit/style/supplementary_materials.cfm}{Author Guidelines for Supplementary Materials in OSA Journals} for more detailed instructions on labeling supplementary materials and your manuscript. Visualizations, Data Files, Datasets, and Code must be associated with a figure, table, or equation, OR be referenced in the results section of the manuscript. 
+%
+%\textbf{Authors may also include Supplemental Documents} (PDF documents with expanded descriptions or methods) with the primary manuscript. At this time, supplemental PDF files are not accepted for partner titles, JOCN and Photonics Research. To reference the supplementary document, the statement ``See Supplement 1 for supporting content.'' should appear at the bottom of the manuscript (above the References heading). Please note that to create text color for supplementary materials links, use of the command \\
+%\verb|\textcolor{urlblue}{Visualization 1}| is preferred to using the command\\
+%\verb|\url{Visualization 1}|.
+%
+%\begin{figure}[ht!]
+%\centering\includegraphics{sample}
+%\caption{(a) Three traps create three rings of magnetic nanoparticles. (b) The rings interact with one another.}
+%\end{figure}
+%
+%
+%\subsection{Sample Dataset Citation}
+%
+%1. M. Partridge, "Spectra evolution during coating," figshare (2014) [retrieved 13 May 2015], http://dx.doi.org/10.6084/m9.figshare.1004612.
+%
+%\subsection{Sample Code Citation}
+%
+%2. C. Rivers, "Epipy: Python tools for epidemiology" (Figshare, 2014) [retrieved 13 May 2015], http://dx.doi.org/10.6084/m9.figshare.1005064.
+%
+%\section{Funding}
+%Content in the funding section will be generated entirely from details submitted to Prism. Authors may add placeholder text in the manuscript to assess length, but any text added to this section in the manuscript will be replaced during production and will display official funder names along with any grant numbers provided. If additional details about a funder are required, they may be added to the Acknowledgments, even if this duplicates information in the funding section. See the example below in Acknowledgements.
+%
+%\section{Acknowledgments}
+%Acknowledgments should be included at the end of the document. The section title should not follow the numbering scheme of the body of the paper. Additional information crediting individuals who contributed to the work being reported, clarifying who received funding from a particular source, or other information that does not fit the criteria for the funding block may also be included; for example, ``K. Flockhart thanks the National Science Foundation for help identifying collaborators for this work.''
+%
+%\section{Disclosures}
+%
+%Disclosures should be listed in a separate section at the end of the manuscript. List the Disclosures codes identified on OSA's \href{http://www.osapublishing.org/submit/review/conflicts-interest-policy.cfm}{Conflict of Interest policy page}. If there are no disclosures, then list ``The authors declare no conflicts of interest.''
+%
+%Here are examples of disclosures:
+%
+%\medskip
+%
+%\noindent\textbf{Disclosures.} ABC: 123 Corporation (I,E,P), DEF: 456 Corporation (R,S). GHI: 789 Corporation (C).
+%
+%\medskip
+%
+%\noindent\textbf{Disclosures.} The authors declare no conflicts of interest.
+%
+%\section{References}
+%
+%Note that \emph{Optics Letters} and \emph{Optica} short articles use an abbreviated reference style. Citations to journal articles should omit the article title and final page number; this abbreviated reference style is produced automatically when the \emph{Optics Letters} journal option is selected in the template, if you are using a .bib file for your references.
+%
+%However, full references (to aid the editor and reviewers) must be included as well on a fifth informational page that will not count against page length; again this will be produced automatically if you are using a .bib file.
+%
+%\bigskip
+%\noindent Add citations manually or use BibTeX. See %\cite{Zhang:14,OSA,FORSTER2007,testthesis,manga_rao_single_2007}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%  end  %%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
 \bibliography{main}
 
+% Full bibliography added automatically for Optics Letters submissions; the following line will simply be ignored if submitting to other journals.
+% Note that this extra page will not count against page length
+\bibliographyfullrefs{main}
 
+%Manual citation list
+%\begin{thebibliography}{1}
+%\bibitem{Zhang:14}
+%Y.~Zhang, S.~Qiao, L.~Sun, Q.~W. Shi, W.~Huang, %L.~Li, and Z.~Yang,
+ % \enquote{Photoinduced active terahertz metamaterials with nanostructured
+  %vanadium dioxide film deposited by sol-gel method,} Opt. Express \textbf{22},
+  %11070--11078 (2014).
+%\end{thebibliography}
 
 \end{document}
